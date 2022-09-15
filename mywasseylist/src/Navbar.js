@@ -6,7 +6,7 @@ const Navbar = () => {
             <h1>mywasseylist</h1>
             <div className="links">
                 <a href="/">Games</a>
-                <a href="/">Something</a>
+                <Link to="/profile">Profile</Link>
             </div>
         </nav>
     )
