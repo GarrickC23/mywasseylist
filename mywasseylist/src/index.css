@@ -28,3 +28,23 @@ code {
 .navbar a {
   margin-left: 16px;
 }
+
+.profile {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile label {
+  text-align: left;
+  display: block;
+}
+
+.profile textarea, .profile select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
