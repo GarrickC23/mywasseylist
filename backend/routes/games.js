@@ -1,26 +1,28 @@
 const express = require('express')
-const Game = require('../models/gameModel')
+const {
+    getAllGames,
+    getGame,
+    updateRating,
+    deleteGame,
+    createGame
+} = require('../controllers/gameController')
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
-    try {
-        const game = await Game.find({})
-        res.status(200).json(game)
-    } catch (error) {
-        res.status(400).json({error: error.message})
-    }
-})
+// get ALL games
+router.get('/', getAllGames)
 
-router.post('/', async (req, res) => {
-    const {title, genre, rating} = req.body
+// get ONE game
+router.get('/:id', getGame)
 
-    try {
-        const game = await Game.create({title, genre, rating})
-        res.status(200).json(game)
-    } catch (error) {
-        res.status(400).json({error: error.message})
-    }
-})
+// CREATE game
+router.post('/', createGame)
+
+// UPDATE game rating
+router.patch('/:id', updateRating)
+
+// DELETE game
+router.delete('/:id', deleteGame)
+
 
 module.exports = router
