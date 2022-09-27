@@ -7,10 +7,13 @@ const {
     createGame
 } = require('../controllers/gameController')
 
+const authenticate = require('../middleware/authenticate')
+
 const router = express.Router()
 
 // get ALL games
-router.get('/', getAllGames)
+// router.get('/', getAllGames)
+router.get('/', authenticate, getAllGames)
 
 // get ONE game
 router.get('/:id', getGame)

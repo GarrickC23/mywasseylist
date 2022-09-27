@@ -6,6 +6,7 @@ const express = require('express')
 // npm install mongoose
 const mongoose = require('mongoose')
 const gameRoutes = require('./routes/games')
+const authRoutes = require('./routes/users')
 
 // express app
 const app = express();
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/api/games', gameRoutes)
+app.use('/api', authRoutes)
 
 
 // connect to db and listen to port
