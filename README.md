@@ -10,6 +10,7 @@
 ### Where we are at
 * User interface allows user to add game ratings and displays them
 <img width="947" alt="image" src="https://user-images.githubusercontent.com/72772860/197368545-f3a7bd5b-9df3-40e9-ba4c-10d5229e0ac2.png">
+
 * Created API calls that Add, Delete, Update, and List game ratings
 * Created API calls that allow users to register their accounts and login
 
